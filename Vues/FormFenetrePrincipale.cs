@@ -57,7 +57,7 @@ namespace FormationSNCF.Vues
 
         private void gestionDesActiviteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            MdiChild = new FormGestionActivite();
         }
     }
 }

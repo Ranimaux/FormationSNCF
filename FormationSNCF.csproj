@@ -85,6 +85,9 @@
     <EmbeddedResource Include="Vues\FormFenetrePrincipale.resx">
       <DependentUpon>FormFenetrePrincipale.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Vues\FormGestionActivite.resx">
+      <DependentUpon>FormGestionActivite.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vues\FormGestionLieux.dje-NE.resx">
       <DependentUpon>FormGestionLieux.cs</DependentUpon>
     </EmbeddedResource>
