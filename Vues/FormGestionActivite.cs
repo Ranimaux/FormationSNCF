@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using FormationSNCF.Modele;
 using FormationSNCF.Vues;
+using FormationSNCF.Ressources;
+using FormationSNCF.Properties;
 
 namespace FormationSNCF.Vues
 {
@@ -32,6 +34,19 @@ namespace FormationSNCF.Vues
                 textboxNomActivite.Text = "";
                 textboxNomActivite.Focus();
             }
+            else
+            {
+                listBoxListeActivite.DataSource = null;
+                foreach (Activite uneCollectionActivite in Donnees.CollectionActivite)
+                {
+                    if(textboxNomActivite.Text != uneCollectionActivite.LibelleActivite)
+                    {
+                        Activite uneActivite = new Activite(textboxNomActivite.Text);
+                        Donnees.CollectionActivite.Add(uneActivite);
+                    }
+                }
+                listBoxListeActivite.DataSource = Donnees.CollectionActivite;
+            }
         }
 
         private void textboxNomActivite_TextChanged(object sender, EventArgs e)
@@ -41,7 +56,17 @@ namespace FormationSNCF.Vues
 
         private void listBoxListeActivite_SelectedIndexChanged(object sender, EventArgs e)
         {
+            listBoxListeActivite.DataSource = Donnees.CollectionActivite;
+        }
 
+        private void FormGestionActivite_Load(object sender, EventArgs e)
+        {
+            listBoxListeActivite.DataSource = Donnees.CollectionActivite;
+        }
+
+        private void FormFenetrePrincipale_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Donnees.SauvegardeDonnees();
         }
     }
 }

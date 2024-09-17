@@ -30,11 +30,11 @@ namespace FormationSNCF.Vues
         private void InitializeComponent()
         {
             this.groupboxAjoutConsultationActivite = new System.Windows.Forms.GroupBox();
-            this.NomActiviteAjout = new System.Windows.Forms.Label();
-            this.textboxNomActivite = new System.Windows.Forms.TextBox();
-            this.ListeActivites = new System.Windows.Forms.Label();
-            this.listBoxListeActivite = new System.Windows.Forms.ListBox();
             this.buttonAjoutActivite = new System.Windows.Forms.Button();
+            this.listBoxListeActivite = new System.Windows.Forms.ListBox();
+            this.ListeActivites = new System.Windows.Forms.Label();
+            this.textboxNomActivite = new System.Windows.Forms.TextBox();
+            this.NomActiviteAjout = new System.Windows.Forms.Label();
             this.groupboxAjoutConsultationActivite.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -53,31 +53,15 @@ namespace FormationSNCF.Vues
             this.groupboxAjoutConsultationActivite.Text = "Ajout et consultation d\'actvités";
             this.groupboxAjoutConsultationActivite.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
-            // NomActiviteAjout
+            // buttonAjoutActivite
             // 
-            this.NomActiviteAjout.AutoSize = true;
-            this.NomActiviteAjout.Location = new System.Drawing.Point(118, 64);
-            this.NomActiviteAjout.Name = "NomActiviteAjout";
-            this.NomActiviteAjout.Size = new System.Drawing.Size(129, 13);
-            this.NomActiviteAjout.TabIndex = 0;
-            this.NomActiviteAjout.Text = "Nom de l\'activite à ajouter";
-            // 
-            // textboxNomActivite
-            // 
-            this.textboxNomActivite.Location = new System.Drawing.Point(264, 64);
-            this.textboxNomActivite.Name = "textboxNomActivite";
-            this.textboxNomActivite.Size = new System.Drawing.Size(219, 20);
-            this.textboxNomActivite.TabIndex = 1;
-            this.textboxNomActivite.TextChanged += new System.EventHandler(this.textboxNomActivite_TextChanged);
-            // 
-            // ListeActivites
-            // 
-            this.ListeActivites.AutoSize = true;
-            this.ListeActivites.Location = new System.Drawing.Point(118, 97);
-            this.ListeActivites.Name = "ListeActivites";
-            this.ListeActivites.Size = new System.Drawing.Size(91, 13);
-            this.ListeActivites.TabIndex = 2;
-            this.ListeActivites.Text = "Liste des activités";
+            this.buttonAjoutActivite.Location = new System.Drawing.Point(591, 64);
+            this.buttonAjoutActivite.Name = "buttonAjoutActivite";
+            this.buttonAjoutActivite.Size = new System.Drawing.Size(75, 23);
+            this.buttonAjoutActivite.TabIndex = 4;
+            this.buttonAjoutActivite.Text = "AJOUTER";
+            this.buttonAjoutActivite.UseVisualStyleBackColor = true;
+            this.buttonAjoutActivite.Click += new System.EventHandler(this.buttonAjoutActivite_Click);
             // 
             // listBoxListeActivite
             // 
@@ -91,15 +75,31 @@ namespace FormationSNCF.Vues
             this.listBoxListeActivite.TabIndex = 3;
             this.listBoxListeActivite.SelectedIndexChanged += new System.EventHandler(this.listBoxListeActivite_SelectedIndexChanged);
             // 
-            // buttonAjoutActivite
+            // ListeActivites
             // 
-            this.buttonAjoutActivite.Location = new System.Drawing.Point(591, 64);
-            this.buttonAjoutActivite.Name = "buttonAjoutActivite";
-            this.buttonAjoutActivite.Size = new System.Drawing.Size(75, 23);
-            this.buttonAjoutActivite.TabIndex = 4;
-            this.buttonAjoutActivite.Text = "AJOUTER";
-            this.buttonAjoutActivite.UseVisualStyleBackColor = true;
-            this.buttonAjoutActivite.Click += new System.EventHandler(this.buttonAjoutActivite_Click);
+            this.ListeActivites.AutoSize = true;
+            this.ListeActivites.Location = new System.Drawing.Point(118, 97);
+            this.ListeActivites.Name = "ListeActivites";
+            this.ListeActivites.Size = new System.Drawing.Size(91, 13);
+            this.ListeActivites.TabIndex = 2;
+            this.ListeActivites.Text = "Liste des activités";
+            // 
+            // textboxNomActivite
+            // 
+            this.textboxNomActivite.Location = new System.Drawing.Point(264, 64);
+            this.textboxNomActivite.Name = "textboxNomActivite";
+            this.textboxNomActivite.Size = new System.Drawing.Size(219, 20);
+            this.textboxNomActivite.TabIndex = 1;
+            this.textboxNomActivite.TextChanged += new System.EventHandler(this.textboxNomActivite_TextChanged);
+            // 
+            // NomActiviteAjout
+            // 
+            this.NomActiviteAjout.AutoSize = true;
+            this.NomActiviteAjout.Location = new System.Drawing.Point(118, 64);
+            this.NomActiviteAjout.Name = "NomActiviteAjout";
+            this.NomActiviteAjout.Size = new System.Drawing.Size(129, 13);
+            this.NomActiviteAjout.TabIndex = 0;
+            this.NomActiviteAjout.Text = "Nom de l\'activite à ajouter";
             // 
             // FormGestionActivite
             // 
@@ -110,6 +110,8 @@ namespace FormationSNCF.Vues
             this.Controls.Add(this.groupboxAjoutConsultationActivite);
             this.Name = "FormGestionActivite";
             this.Text = "FormGestionActivite";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormFenetrePrincipale_FormClosing);
+            this.Load += new System.EventHandler(this.FormGestionActivite_Load);
             this.groupboxAjoutConsultationActivite.ResumeLayout(false);
             this.groupboxAjoutConsultationActivite.PerformLayout();
             this.ResumeLayout(false);
