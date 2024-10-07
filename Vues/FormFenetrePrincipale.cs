@@ -59,5 +59,30 @@ namespace FormationSNCF.Vues
         {
             MdiChild = new FormGestionActivite();
         }
+
+        private void aJOUTAGENTToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MdiChild = new FormAjoutAgent();
+        }
+
+        private void gestionDesActionsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MdiChild = new FormGestionActionFormation();
+        }
+
+        private void GestionSessionsDeFormationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MdiChild = new FormGestionSessionDeFormation();
+        }
+
+        private void InscriptionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //MdiChild = new FormGestionInscription();
+        }
+
+        private void sESSIONToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

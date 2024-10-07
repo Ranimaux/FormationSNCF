@@ -66,9 +66,6 @@ namespace FormationSNCF.Vues
             // listBoxListeActivite
             // 
             this.listBoxListeActivite.FormattingEnabled = true;
-            this.listBoxListeActivite.Items.AddRange(new object[] {
-            "INFORMATIQUE",
-            "COMPTABILITE"});
             this.listBoxListeActivite.Location = new System.Drawing.Point(264, 97);
             this.listBoxListeActivite.Name = "listBoxListeActivite";
             this.listBoxListeActivite.Size = new System.Drawing.Size(219, 173);

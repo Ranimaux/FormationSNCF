@@ -37,6 +37,12 @@ namespace FormationSNCF.Vues
             this.gestionDesLieuxToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gESTIONACTIVITEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gestionDesActiviteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aGENTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.AjoutAgentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aCTIONSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.GestionActionFormationToolStripMenuItem_Click = new System.Windows.Forms.ToolStripMenuItem();
+            this.sESSIONToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.GestionSessionsDeFormationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuPrincipalMenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -44,7 +50,10 @@ namespace FormationSNCF.Vues
             // 
             this.menuPrincipalMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.lieuToolStripMenuItem,
-            this.gESTIONACTIVITEToolStripMenuItem});
+            this.gESTIONACTIVITEToolStripMenuItem,
+            this.aGENTToolStripMenuItem,
+            this.aCTIONSToolStripMenuItem,
+            this.sESSIONToolStripMenuItem});
             this.menuPrincipalMenuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuPrincipalMenuStrip.Name = "menuPrincipalMenuStrip";
             this.menuPrincipalMenuStrip.Size = new System.Drawing.Size(815, 24);
@@ -64,7 +73,7 @@ namespace FormationSNCF.Vues
             // gestionDesLieuxToolStripMenuItem
             // 
             this.gestionDesLieuxToolStripMenuItem.Name = "gestionDesLieuxToolStripMenuItem";
-            this.gestionDesLieuxToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.gestionDesLieuxToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
             this.gestionDesLieuxToolStripMenuItem.Text = "GESTION DES LIEUX";
             this.gestionDesLieuxToolStripMenuItem.Click += new System.EventHandler(this.gestionDesLieuxToolStripMenuItem_Click_1);
             // 
@@ -83,6 +92,52 @@ namespace FormationSNCF.Vues
             this.gestionDesActiviteToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
             this.gestionDesActiviteToolStripMenuItem.Text = "GESTION DES ACTIVITE";
             this.gestionDesActiviteToolStripMenuItem.Click += new System.EventHandler(this.gestionDesActiviteToolStripMenuItem_Click);
+            // 
+            // aGENTToolStripMenuItem
+            // 
+            this.aGENTToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.AjoutAgentToolStripMenuItem});
+            this.aGENTToolStripMenuItem.Name = "aGENTToolStripMenuItem";
+            this.aGENTToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
+            this.aGENTToolStripMenuItem.Text = "AGENT";
+            // 
+            // AjoutAgentToolStripMenuItem
+            // 
+            this.AjoutAgentToolStripMenuItem.Name = "AjoutAgentToolStripMenuItem";
+            this.AjoutAgentToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
+            this.AjoutAgentToolStripMenuItem.Text = "AJOUT AGENT";
+            this.AjoutAgentToolStripMenuItem.Click += new System.EventHandler(this.aJOUTAGENTToolStripMenuItem_Click);
+            // 
+            // aCTIONSToolStripMenuItem
+            // 
+            this.aCTIONSToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.GestionActionFormationToolStripMenuItem_Click});
+            this.aCTIONSToolStripMenuItem.Name = "aCTIONSToolStripMenuItem";
+            this.aCTIONSToolStripMenuItem.Size = new System.Drawing.Size(68, 20);
+            this.aCTIONSToolStripMenuItem.Text = "ACTIONS";
+            // 
+            // GestionActionFormationToolStripMenuItem_Click
+            // 
+            this.GestionActionFormationToolStripMenuItem_Click.Name = "GestionActionFormationToolStripMenuItem_Click";
+            this.GestionActionFormationToolStripMenuItem_Click.Size = new System.Drawing.Size(196, 22);
+            this.GestionActionFormationToolStripMenuItem_Click.Text = "GESTION DES ACTIONS";
+            this.GestionActionFormationToolStripMenuItem_Click.Click += new System.EventHandler(this.gestionDesActionsToolStripMenuItem_Click);
+            // 
+            // sESSIONToolStripMenuItem
+            // 
+            this.sESSIONToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.GestionSessionsDeFormationToolStripMenuItem});
+            this.sESSIONToolStripMenuItem.Name = "sESSIONToolStripMenuItem";
+            this.sESSIONToolStripMenuItem.Size = new System.Drawing.Size(64, 20);
+            this.sESSIONToolStripMenuItem.Text = "SESSION";
+            this.sESSIONToolStripMenuItem.Click += new System.EventHandler(this.sESSIONToolStripMenuItem_Click);
+            // 
+            // GestionSessionsDeFormationToolStripMenuItem
+            // 
+            this.GestionSessionsDeFormationToolStripMenuItem.Name = "GestionSessionsDeFormationToolStripMenuItem";
+            this.GestionSessionsDeFormationToolStripMenuItem.Size = new System.Drawing.Size(256, 22);
+            this.GestionSessionsDeFormationToolStripMenuItem.Text = "GESTION SESSION DE FORMATION";
+            this.GestionSessionsDeFormationToolStripMenuItem.Click += new System.EventHandler(this.GestionSessionsDeFormationToolStripMenuItem_Click);
             // 
             // FormFenetrePrincipale
             // 
@@ -117,5 +172,11 @@ namespace FormationSNCF.Vues
         private System.Windows.Forms.ToolStripMenuItem gestionDesLieuxToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gESTIONACTIVITEToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gestionDesActiviteToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem aGENTToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem AjoutAgentToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem aCTIONSToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem GestionActionFormationToolStripMenuItem_Click;
+        private System.Windows.Forms.ToolStripMenuItem sESSIONToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem GestionSessionsDeFormationToolStripMenuItem;
     }
 }

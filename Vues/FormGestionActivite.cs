@@ -36,16 +36,24 @@ namespace FormationSNCF.Vues
             }
             else
             {
-                listBoxListeActivite.DataSource = null;
-                foreach (Activite uneCollectionActivite in Donnees.CollectionActivite)
+                Activite uneActivite = new Activite(textboxNomActivite.Text);
+                if(!Donnees.CollectionActivite.Contains(uneActivite))
                 {
-                    if(textboxNomActivite.Text != uneCollectionActivite.LibelleActivite)
-                    {
-                        Activite uneActivite = new Activite(textboxNomActivite.Text);
-                        Donnees.CollectionActivite.Add(uneActivite);
-                    }
+                    Donnees.CollectionActivite.Add(uneActivite);
                 }
+                listBoxListeActivite.DataSource = null;
                 listBoxListeActivite.DataSource = Donnees.CollectionActivite;
+                
+                listBoxListeActivite.DisplayMember = "LibelleActivite";
+
+                //foreach (Activite uneCollectionActivite in Donnees.CollectionActivite)
+                //{
+                //    if (textboxNomActivite.Text != uneCollectionActivite.LibelleActivite)
+                //    {
+                //        Activite uneActivite = new Activite(textboxNomActivite.Text);
+                //        Donnees.CollectionActivite.Add(uneActivite);
+                //    }
+                //}
             }
         }
 
@@ -62,6 +70,7 @@ namespace FormationSNCF.Vues
         private void FormGestionActivite_Load(object sender, EventArgs e)
         {
             listBoxListeActivite.DataSource = Donnees.CollectionActivite;
+            listBoxListeActivite.DisplayMember = "LibelleActivite";
         }
 
         private void FormFenetrePrincipale_FormClosing(object sender, FormClosingEventArgs e)
