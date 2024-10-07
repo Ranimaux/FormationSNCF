@@ -43,6 +43,7 @@ namespace FormationSNCF.Vues
             this.GestionActionFormationToolStripMenuItem_Click = new System.Windows.Forms.ToolStripMenuItem();
             this.sESSIONToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.GestionSessionsDeFormationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ArchiveAgentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuPrincipalMenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -96,7 +97,8 @@ namespace FormationSNCF.Vues
             // aGENTToolStripMenuItem
             // 
             this.aGENTToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.AjoutAgentToolStripMenuItem});
+            this.AjoutAgentToolStripMenuItem,
+            this.ArchiveAgentToolStripMenuItem});
             this.aGENTToolStripMenuItem.Name = "aGENTToolStripMenuItem";
             this.aGENTToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
             this.aGENTToolStripMenuItem.Text = "AGENT";
@@ -104,7 +106,7 @@ namespace FormationSNCF.Vues
             // AjoutAgentToolStripMenuItem
             // 
             this.AjoutAgentToolStripMenuItem.Name = "AjoutAgentToolStripMenuItem";
-            this.AjoutAgentToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
+            this.AjoutAgentToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
             this.AjoutAgentToolStripMenuItem.Text = "AJOUT AGENT";
             this.AjoutAgentToolStripMenuItem.Click += new System.EventHandler(this.aJOUTAGENTToolStripMenuItem_Click);
             // 
@@ -138,6 +140,13 @@ namespace FormationSNCF.Vues
             this.GestionSessionsDeFormationToolStripMenuItem.Size = new System.Drawing.Size(256, 22);
             this.GestionSessionsDeFormationToolStripMenuItem.Text = "GESTION SESSION DE FORMATION";
             this.GestionSessionsDeFormationToolStripMenuItem.Click += new System.EventHandler(this.GestionSessionsDeFormationToolStripMenuItem_Click);
+            // 
+            // ArchiveAgentToolStripMenuItem
+            // 
+            this.ArchiveAgentToolStripMenuItem.Name = "ArchiveAgentToolStripMenuItem";
+            this.ArchiveAgentToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
+            this.ArchiveAgentToolStripMenuItem.Text = "ARCHIVER UN AGENT";
+            this.ArchiveAgentToolStripMenuItem.Click += new System.EventHandler(this.ArchiveAgentToolStripMenuItem_Click);
             // 
             // FormFenetrePrincipale
             // 
@@ -178,5 +187,6 @@ namespace FormationSNCF.Vues
         private System.Windows.Forms.ToolStripMenuItem GestionActionFormationToolStripMenuItem_Click;
         private System.Windows.Forms.ToolStripMenuItem sESSIONToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem GestionSessionsDeFormationToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ArchiveAgentToolStripMenuItem;
     }
 }

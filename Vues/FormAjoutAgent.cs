@@ -47,6 +47,7 @@ namespace FormationSNCF.Vues
                     max = item.Numero;
             }
             labelNumeroAgent.Text = Convert.ToString(max + 1);
+
         }
 
         private void ReinitialiserFormulaire()
@@ -71,6 +72,8 @@ namespace FormationSNCF.Vues
 
         private void buttonAjoutAgent_Click(object sender, EventArgs e)
         {
+
+
             int numeroAgent = int.Parse(labelNumeroAgent.Text);
             string civilite = comboBoxCivilite.Text;
             string nomAgent = textBoxNom.Text;
@@ -103,14 +106,8 @@ namespace FormationSNCF.Vues
                 }
                 unAgent.LieuDeTravaille = unLieu;
             }
-            if (VerificationDuFormulaireAjoutAgent())
-            {
-                MessageBox.Show("Le formulaire est correcte, envoi en cours...");
-                Donnees.CollectionAgent.Add(unAgent);
-                comboBoxLieu.DisplayMember = "LibelleLieu";
-            }
+            Donnees.CollectionAgent.Add(unAgent);
             ReinitialiserFormulaire();
-
         }
 
         private void textBoxDateNaissance_TextChanged(object sender, EventArgs e)

@@ -84,5 +84,10 @@ namespace FormationSNCF.Vues
         {
             
         }
+
+        private void ArchiveAgentToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MdiChild = new FormArchivageAgent();
+        }
     }
 }

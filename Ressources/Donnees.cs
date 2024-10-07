@@ -13,6 +13,7 @@ namespace FormationSNCF.Ressources
     {
         private static List<Activite> _collectionActivite;
         private static List<Agent> _collectionAgent;
+        private static List<Agent> _collectionArchiveAgent;
         private static List<Lieu> _collectionLieu;
 
         /// <summary>
@@ -49,6 +50,30 @@ namespace FormationSNCF.Ressources
                 return Donnees._collectionAgent;
             }
         }
+
+        public static List<Agent> AgentArchive
+        {
+            get
+            {
+                if(_collectionArchiveAgent == null)
+                {
+                    _collectionArchiveAgent = (List<Agent>)Persistances.ChargerDonnees("AgentArchive");
+                    if (_collectionArchiveAgent == null)
+                        _collectionArchiveAgent = new List<Agent>();
+
+                }
+                return Donnees._collectionArchiveAgent;
+            }
+            set
+            {
+                if(_collectionAgent != null)
+                {
+                    _collectionArchiveAgent = _collectionAgent;
+                    Persistances.SauvegarderDonnees("AgentArchive", _collectionArchiveAgent);
+                }
+            }
+        }
+
         /// <summary>
         /// Obtient la liste des lieux
         /// </summary>
@@ -74,6 +99,7 @@ namespace FormationSNCF.Ressources
             Persistances.SauvegarderDonnees("Agent", _collectionAgent);
             Persistances.SauvegarderDonnees("Activite", _collectionActivite);
             Persistances.SauvegarderDonnees("Lieu", _collectionLieu);
+            Persistances.SauvegarderDonnees("AgentArchive", _collectionArchiveAgent);
         }
 
 

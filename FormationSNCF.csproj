@@ -63,6 +63,12 @@
     <Compile Include="Vues\FormAjoutAgent.Designer.cs">
       <DependentUpon>FormAjoutAgent.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vues\FormArchivageAgent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vues\FormArchivageAgent.Designer.cs">
+      <DependentUpon>FormArchivageAgent.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vues\FormFenetrePrincipale.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,6 +99,12 @@
     <Compile Include="Vues\FormGestionSessionDeFormation.Designer.cs">
       <DependentUpon>FormGestionSessionDeFormation.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vues\FormTestArchiveAgent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vues\FormTestArchiveAgent.Designer.cs">
+      <DependentUpon>FormTestArchiveAgent.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -105,6 +117,9 @@
     </Compile>
     <EmbeddedResource Include="Vues\FormAjoutAgent.resx">
       <DependentUpon>FormAjoutAgent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vues\FormArchivageAgent.resx">
+      <DependentUpon>FormArchivageAgent.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vues\FormFenetrePrincipale.resx">
       <DependentUpon>FormFenetrePrincipale.cs</DependentUpon>
@@ -123,6 +138,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vues\FormGestionSessionDeFormation.resx">
       <DependentUpon>FormGestionSessionDeFormation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vues\FormTestArchiveAgent.resx">
+      <DependentUpon>FormTestArchiveAgent.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
